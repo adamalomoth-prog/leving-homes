@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ركن الألعاب - Loving Homes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --burgundy: #800020; }
+        .text-burgundy { color: var(--burgundy); }
+        .bg-burgundy { background-color: var(--burgundy); border-color: var(--burgundy); }
+        .btn-add-cart { 
+            background-color: var(--burgundy); 
+            color: white; 
+            padding: 0.75rem; 
+            border-radius: 1rem; 
+            width: 100%; 
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-add-cart:hover { background-color: #600018; transform: translateY(-2px); }
+        .toy-card { transition: transform 0.3s ease; }
+        .toy-card:hover { transform: translateY(-10px); }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-md p-5 flex justify-between items-center px-10 sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+             <h1 class="text-2xl font-bold text-burgundy">🐾 Loving Homes</h1>
+        </div>
+        <div class="hidden md:flex space-x-reverse space-x-6 font-bold text-slate-600 items-center">
+            <a href="index.html" class="hover:text-burgundy transition">الرئيسية</a>
+            <a href="services.html" class="hover:text-burgundy transition">خدماتنا</a>
+            <a href="packages.html" class="hover:text-burgundy transition">الباقات</a>
+            <a href="clothes.html" class="hover:text-burgundy transition">الملابس</a>
+            <a href="toys.html" class="text-burgundy border-b-2 border-burgundy pb-1">الألعاب</a>
+            <button onclick="toggleCart()" class="relative bg-slate-100 p-2 rounded-full hover:bg-slate-200 transition">
+                🛒 <span id="cart-count" class="absolute -top-1 -right-1 bg-burgundy text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="py-16 text-center bg-gradient-to-b from-slate-200 to-gray-50">
+        <h2 class="text-4xl font-bold text-burgundy mb-4 italic">ركن المرح والمغامرة 🎾</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">تشكيلة ألعاب "لافيينج هومز" المختارة بعناية لتحفيز حواس أليفك.</p>
+    </header>
+
+    <section class="container mx-auto px-6 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="toy-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col">
+                <img src="PinDown.io_@aliexpress_1773127696.jpg" alt="لعبة البطة" class="w-full h-72 object-cover">
+                <div class="p-8 text-center flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">البطة الصفراء الناعمة</h3>
+                    <p class="text-burgundy font-bold text-lg mb-4 mt-auto">$9.00</p>
+                    <button onclick="addToCart('البطة الصفراء', 9.00)" class="btn-add-cart">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="toy-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col">
+                <img src="7355b59a25022dd1f7e60a2e4a952910.jpg" alt="طقم حبال" class="w-full h-72 object-cover">
+                <div class="p-8 text-center flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">طقم الحبال القطنية (4 قطع)</h3>
+                    <p class="text-burgundy font-bold text-lg mb-4 mt-auto">$15.50</p>
+                    <button onclick="addToCart('طقم الحبال', 15.50)" class="btn-add-cart">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="toy-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col">
+                <img src="PinDown.io_@SHEINofficial_1773127663.jpg" alt="كرات مساج" class="w-full h-72 object-cover">
+                <div class="p-8 text-center flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">كرات المساج التفاعلية</h3>
+                    <p class="text-burgundy font-bold text-lg mb-4 mt-auto">$6.00</p>
+                    <button onclick="addToCart('كرات المساج', 6.00)" class="btn-add-cart">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="toy-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col">
+                <img src="fe6baf314d21afe0e8aa1ac0efb7308d.jpg" alt="طقم أزرق" class="w-full h-72 object-cover">
+                <div class="p-8 text-center flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">مجموعة العض (سكاي بلو)</h3>
+                    <p class="text-burgundy font-bold text-lg mb-4 mt-auto">$18.00</p>
+                    <button onclick="addToCart('طقم ألعاب أزرق', 18.00)" class="btn-add-cart">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="toy-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col">
+                <img src="f4fa46e7ed7d8d76ee563149c3fa516d.jpg" alt="طقم وردي" class="w-full h-72 object-cover">
+                <div class="p-8 text-center flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">مجموعة العض (بينك كاندي)</h3>
+                    <p class="text-burgundy font-bold text-lg mb-4 mt-auto">$18.00</p>
+                    <button onclick="addToCart('طقم ألعاب وردي', 18.00)" class="btn-add-cart">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="toy-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col">
+                <img src="45bdf51e37964ba2a5e8c9bfbe11707d.jpg" alt="عصا ريش" class="w-full h-72 object-cover">
+                <div class="p-8 text-center flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">عصا الريش التفاعلية</h3>
+                    <p class="text-burgundy font-bold text-lg mb-4 mt-auto">$4.50</p>
+                    <button onclick="addToCart('عصا الريش', 4.50)" class="btn-add-cart">إضافة للسلة</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
