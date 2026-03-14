@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باقات الإقامة - Loving Homes</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <nav class="bg-white shadow-md p-5 flex justify-between items-center px-10 sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <img src="file_00000000ba2c7246bf29f1c2293d82a2.jpg" class="h-12 w-12 rounded-full border-2 border-burgundy">
+            <h1 class="text-2xl font-bold text-burgundy">LOVING HOMES</h1>
+        </div>
+        
+        <div class="hidden md:flex space-x-reverse space-x-6 font-bold text-slate-600 items-center">
+            <a href="index.html" class="nav-link">الرئيسية</a>
+            <a href="services.html" class="nav-link">خدماتنا</a>
+            <a href="packages.html" class="text-burgundy border-b-2 border-burgundy pb-1">الباقات</a>
+            <a href="shop.html" class="nav-link">المستلزمات</a>
+            <a href="clothes.html" class="nav-link">الملابس</a> 
+            <a href="toys.html" class="nav-link">الألعاب</a> 
+            <a href="book.html" class="bg-burgundy text-white px-6 py-2 rounded-full hover:bg-red-900 transition shadow-lg">احجز الآن</a>
+        </div>
+    </nav>
+
+    <header class="py-16 text-center bg-slate-200 border-b border-slate-300">
+        <h2 class="text-4xl font-bold text-burgundy mb-4">باقات الإقامة الملكية</h2>
+        <p class="text-slate-500 max-w-xl mx-auto italic">خيارات متنوعة صممت خصيصاً لراحة وسعادة أليفك</p>
+    </header>
+
+    <section class="py-20 container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8 items-stretch">
+            
+            <div class="package-card bg-white rounded-[3rem] overflow-hidden shadow-lg border border-slate-200 flex flex-col">
+                <div class="bg-slate-500 text-white text-center py-6 font-bold text-xl uppercase tracking-widest">باقة اليوم</div>
+                <div class="p-10 flex-grow text-center">
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold text-burgundy">15</span>
+                        <span class="text-slate-400 font-bold text-xl uppercase">$</span>
+                    </div>
+                    <ul class="space-y-4 mb-10 text-right text-slate-600">
+                        <li class="flex items-center"><span class="ml-3 text-burgundy">🐾</span> مشي مرتين يومياً</li>
+                        <li class="flex items-center"><span class="ml-3 text-burgundy">🐾</span> مسار الرشاقة (Agility)</li>
+                        <li class="flex items-center"><span class="ml-3 text-burgundy">🐾</span> منطقة لعب مفتوحة</li>
+                    </ul>
+                </div>
+                <div class="p-10 pt-0">
+                    <button onclick="addToCart('باقة اليوم', 15)" class="w-full text-center border-2 border-slate-500 text-slate-600 hover:bg-slate-500 hover:text-white py-3 rounded-2xl font-bold transition">اختيار الباقة</button>
+                </div>
+            </div>
+
+            <div class="package-card bg-white rounded-[3rem] overflow-hidden shadow-2xl border-4 border-burgundy transform scale-105 z-10 flex flex-col">
+                <div class="bg-burgundy text-white text-center py-2 text-xs font-bold uppercase tracking-widest">الأكثر طلباً</div>
+                <div class="bg-burgundy text-white text-center py-8 font-bold text-2xl">الكلاسيكية</div>
+                <div class="p-10 flex-grow text-center">
+                    <div class="mb-6">
+                        <span class="text-6xl font-bold text-slate-800">25</span>
+                        <span class="text-slate-400 font-bold text-xl uppercase">$</span>
+                    </div>
+                    <ul class="space-y-4 mb-10 text-right text-slate-700 font-bold">
+                        <li class="flex items-center"><span class="ml-3 text-burgundy text-xl">✅</span> مشي 3 مرات يومياً</li>
+                        <li class="flex items-center"><span class="ml-3 text-burgundy text-xl">✅</span> حظيرة لعب داخلية</li>
+                        <li class="flex items-center"><span class="ml-3 text-burgundy text-xl">✅</span> جلسة تنظيف يومية</li>
+                        <li class="flex items-center"><span class="ml-3 text-burgundy text-xl">✅</span> تحديثات واتساب</li>
+                    </ul>
+                </div>
+                <div class="p-10 pt-0">
+                    <button onclick="addToCart('الباقة الكلاسيكية', 25)" class="w-full text-center bg-burgundy text-white py-4 rounded-2xl font-bold shadow-lg hover:bg-red-900 transition">احجز الآن</button>
+                </div>
+            </div>
+
+            <div class="package-card bg-white rounded-[3rem] overflow-hidden shadow-lg border border-slate-200 flex flex-col">
+                <div class="bg-slate-800 text-white text-center py-6 font-bold text-xl uppercase tracking-widest">المميزة (VIP)</div>
+                <div class="p-10 flex-grow text-center">
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold text-burgundy">40</span>
+                        <span class="text-slate-400 font-bold text-xl uppercase">$</span>
+                    </div>
+                    <ul class="space-y-4 mb-10 text-right text-slate-600 font-medium">
+                        <li class="flex items-center"><span class="ml-3 text-burgundy">✨</span> مشي 4 مرات + أنشطة</li>
+                        <li class="flex items-center"><span class="ml-3 text-burgundy">✨</span> بث مباشر 24/7</li>
+                        <li class="flex items-center font-bold text-burgundy"><span class="ml-3">✨</span> جلسة سبا (Spa)</li>
+                        <li class="flex items-center"><span class="ml-3 text-burgundy">✨</span> وجبات Gourmet فاخرة</li>
+                    </ul>
+                </div>
+                <div class="p-10 pt-0">
+                    <button onclick="addToCart('باقة VIP', 40)" class="w-full text-center border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white py-3 rounded-2xl font-bold transition">تجربة ملكية</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="pb-20 container mx-auto px-6">
+        <div class="bg-slate-800 rounded-[3rem] p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+            <div class="text-right">
+                <h3 class="text-3xl font-bold mb-4 italic">اجعل إقامته ذكرى لا تُنسى! 🎁</h3>
+                <p class="text-slate-300 text-lg">احجز باقة الـ VIP واحصل على خصم 15% على قسم الألعاب والملابس.</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="toys.html" class="bg-white text-slate-800 px-6 py-3 rounded-xl font-bold hover:bg-burgundy hover:text-white transition">قسم الألعاب</a>
+                <a href="clothes.html" class="border border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white hover:text-slate-800 transition">قسم الملابس</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-12">
+    <div class="relative group max-w-5xl mx-auto">
+        <h3 class="text-2xl font-bold text-burgundy mb-6 border-r-4 border-burgundy pr-4 italic">
+            شاهد الأناقة في الحركة 🐾
+        </h3>
+        
+        <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200 bg-black">
+            <video 
+                class="w-full aspect-video object-cover" 
+                controls 
+                preload="metadata">
+                <source src="PinDown.io_@cozycorner33_1773046280.mp4" type="video/mp4">
+                عذراً، متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto px-6 py-12">
+    <div class="relative group max-w-5xl mx-auto">
+        <h3 class="text-2xl font-bold text-burgundy mb-6 border-r-4 border-burgundy pr-4 italic">
+            شاهد الأناقة في الحركة 🐾
+        </h3>
+        
+        <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200 bg-black">
+            <video 
+                class="w-full aspect-video object-cover" 
+                controls 
+                preload="metadata">
+                <source src="PinDown.io_@ncyclopaedia_1773046224.mp4" type="video/mp4">
+                عذراً، متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-slate-800 text-slate-400 py-12 text-center border-t border-slate-700">
+        <p class="mb-2 font-bold text-white">🐾 Loving Homes</p>
+        <p class="text-xs opacity-50 italic uppercase tracking-widest">Excellence in Pet Care © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+body { 
+    font-family: 'Cairo', sans-serif; 
+    scroll-behavior: smooth;
+}
+
+/* قسم الهيرو (الخلفية الكبيرة) */
+.full-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('صور ل كلاب .jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 15vh;
+}
+
+/* العناوين */
+.main-title {
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 1.8rem;
+    color: white;
+    background: rgba(127, 29, 29, 0.7); 
+    padding: 0.6rem 2.5rem;
+    border-radius: 99px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* تأثيرات عامة */
+.nav-link-active {
+    border-bottom: 4px solid white;
+    padding-bottom: 4px;
+}
+
+.transition-soft {
+    transition: all 0.3s ease;
+}
+/* إضافات خاصة بصفحة الباقات */
+.package-card { 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.package-card:hover { 
+    transform: translateY(-15px); 
+    box-shadow: 0 25px 50px -12px rgba(127, 29, 29, 0.2);
+}
+
+.bg-burgundy { background-color: #7f1d1d; }
+.text-burgundy { color: #7f1d1d; }
+.border-burgundy { border-color: #7f1d1d; }
+
+.nav-link { transition: all 0.3s ease; }
+.nav-link:hover { color: #7f1d1d; }
+/* إضافات لصفحة الحجز */
+.bg-burgundy { background-color: #7f1d1d; }
+.text-burgundy { color: #7f1d1d; }
+.border-burgundy { border-color: #7f1d1d; }
+
+.nav-link { 
+    transition: all 0.3s ease; 
+}
+
+.nav-link:hover { 
+    color: #7f1d1d; 
+}
+
+/* تحسين شكل المدخلات */
+input:focus, select:focus, textarea:focus {
+    background-color: white !important;
+    border-color: #7f1d1d !important;
+    box-shadow: 0 0 0 2px rgba(127, 29, 29, 0.1);
+}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>بوتيك الأناقة -Loving Homes </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .product-card { transition: all 0.4s ease; border-radius: 2rem; overflow: hidden; background: white; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(127, 29, 29, 0.1); }
+        .bg-burgundy { background-color: #7f1d1d; }
+        .text-burgundy { color: #7f1d1d; }
+        #cart-drawer { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .drawer-open { transform: translateX(0) !important; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <nav class="bg-white shadow-sm p-5 flex justify-between items-center px-10 sticky top-0 z-50">
+        <h1 class="text-2xl font-bold text-burgundy">🐾 Loving Homes</h1>
+        <div class="hidden md:flex items-center space-x-reverse space-x-7 font-bold text-slate-600">
+            <a href="index.html" class="hover:text-burgundy transition">الرئيسية</a>
+            <a href="services.html" class="hover:text-burgundy transition">خدماتنا</a>
+            <a href="packages.html" class="hover:text-burgundy transition">الباقات</a> 
+            <a href="shop.html" class="hover:text-burgundy transition">المستلزمات</a>
+            <a href="toys.html" class="hover:text-burgundy transition">الألعاب</a>
+            <a href="clothes.html" class="text-burgundy border-b-2 border-burgundy pb-1">الملابس</a>
+            <button onclick="toggleCart()" class="relative bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition">
+                🛒 <span id="cart-count" class="absolute -top-1 -right-1 bg-burgundy text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="py-16 text-center bg-slate-900 text-white">
+        <h2 class="text-4xl font-bold mb-4 italic text-white/90">خزانة الأناقة الملكية ✨</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">تشكيلة حصرية من أرقى الملابس والإكسسوارات لأليفك المدلل بالدولار.</p>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="product-card shadow-md flex flex-col">
+                <img src="ملابس.jpg" alt="سترة شتوية" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-grow flex-col">
+                    <h3 class="font-bold text-lg mb-2">سترة الشتاء الفاخرة</h3>
+                    <div class="mt-auto flex justify-between items-center">
+                        <span class="text-xl font-bold text-burgundy">$25.50</span>
+                        <button onclick="addToCart('سترة الشتاء', 25.5)" class="bg-burgundy text-white px-4 py-2 rounded-xl hover:bg-red-900 transition">إضافة +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card shadow-md flex flex-col">
+                <img src="ملابسb.jpg" alt="هودي" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-grow flex-col">
+                    <h3 class="font-bold text-lg mb-2">هودي كاجوال مودرن</h3>
+                    <div class="mt-auto flex justify-between items-center">
+                        <span class="text-xl font-bold text-burgundy">$19.99</span>
+                        <button onclick="addToCart('هودي كاجوال', 19.99)" class="bg-burgundy text-white px-4 py-2 rounded-xl hover:bg-red-900 transition">إضافة +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card shadow-md flex flex-col text-center">
+                <img src="سوار 5.jpg" alt="سوار" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-grow flex-col">
+                    <h3 class="font-bold text-lg mb-2">سوار "برستيج" خماسي</h3>
+                    <div class="mt-auto flex justify-between items-center text-right">
+                        <span class="text-xl font-bold text-burgundy">$16.50</span>
+                        <button onclick="addToCart('سوار برستيج 5', 16.5)" class="bg-burgundy text-white px-4 py-2 rounded-xl hover:bg-red-900 transition">إضافة +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card shadow-md flex flex-col">
+                <img src="e80cd5daac53fa2cf92c46b99f0a874c.jpg" alt="بدلة رسمية" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-grow flex-col">
+                    <h3 class="font-bold text-lg mb-2">طقم المناسبات الرسمية</h3>
+                    <div class="mt-auto flex justify-between items-center">
+                        <span class="text-xl font-bold text-burgundy">$35.00</span>
+                        <button onclick="addToCart('طقم المناسبات', 35)" class="bg-burgundy text-white px-4 py-2 rounded-xl hover:bg-red-900 transition">إضافة +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card shadow-md flex flex-col text-center">
+                <img src="d53c05060ba977729ead4a906c16a523.jpg" alt="فستان" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-grow flex-col">
+                    <h3 class="font-bold text-lg mb-2">فستان الأميرة الوردي</h3>
+                    <div class="mt-auto flex justify-between items-center text-right">
+                        <span class="text-xl font-bold text-burgundy">$28.00</span>
+                        <button onclick="addToCart('فستان الأميرة', 28)" class="bg-burgundy text-white px-4 py-2 rounded-xl hover:bg-red-900 transition">إضافة +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card shadow-md flex flex-col">
+                <img src="dea267f69a74cd635b221687d259cf17.jpg" alt="تيشرت" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-grow flex-col text-center">
+                    <h3 class="font-bold text-lg mb-2">تيشرت قطني مريح</h3>
+                    <div class="mt-auto flex justify-between items-center text-right">
+                        <span class="text-xl font-bold text-burgundy">$12.00</span>
+                        <button onclick="addToCart('تيشرت مريح', 12)" class="bg-burgundy text-white px-4 py-2 rounded-xl hover:bg-red-900 transition">إضافة +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card shadow-md flex flex-col">
+                <img src="269d36bad0584380404eb7379baa0999.jpg" alt="ملابس صوف" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-grow flex-col text-center">
+                    <h3 class="font-bold text-lg mb-2">بلوفر صوف يدوي</h3>
+                    <div class="mt-auto flex justify-between items-center text-right">
+                        <span class="text-xl font-bold text-burgundy">$22.00</span>
+                        <button onclick="addToCart('بلوفر صوف', 22)" class="bg-burgundy text-white px-4 py-2 rounded-xl hover:bg-red-900 transition">إضافة +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card shadow-md flex flex-col">
+                <img src="d00b32d4f956d0ed1aef8c0765be594b.jpg" alt="إكسسوار" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-grow flex-col text-center">
+                    <h3 class="font-bold text-lg mb-2">ربطة عنق فاخرة</h3>
+                    <div class="mt-auto flex justify-between items-center text-right">
+                        <span class="text-xl font-bold text-burgundy">$10.00</span>
+                        <button onclick="addToCart('ربطة عنق', 10)" class="bg-burgundy text-white px-4 py-2 rounded-xl hover:bg-red-900 transition">إضافة +</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-[60] p-6 transform translate-x-full flex flex-col border-l-4 border-burgundy">
+        <div class="flex justify-between items-center border-b pb-4 mb-4">
+            <h3 class="text-xl font-bold text-burgundy italic">عربتك الملكية</h3>
+            <button onclick="toggleCart()" class="text-slate-400 hover:text-red-600 font-bold text-2xl">✕</button>
+        </div>
+        <div id="cart-items" class="flex-grow overflow-y-auto space-y-4 py-2">
+            <p id="empty-msg" class="text-center text-slate-400 mt-10">العربة فارغة.</p>
+        </div>
+        <div class="border-t pt-4 mt-4 text-center">
+            <div class="flex justify-between text-xl font-bold mb-6">
+                <span>الإجمالي:</span>
+                <span id="total-price" class="text-burgundy">$0.00</span>
+            </div>
+            <button onclick="alert('سنتواصل معك لإتمام الطلب!')" class="w-full bg-slate-800 text-white py-4 rounded-xl font-bold hover:bg-burgundy transition shadow-lg">إتمام الطلب</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        function toggleCart() { document.getElementById('cart-drawer').classList.toggle('drawer-open'); }
+        
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateUI();
+            if (!document.getElementById('cart-drawer').classList.contains('drawer-open')) toggleCart();
+        }
+
+        function updateUI() {
+            const list = document.getElementById('cart-items');
+            const count = document.getElementById('cart-count');
+            const totalEl = document.getElementById('total-price');
+            const emptyMsg = document.getElementById('empty-msg');
+            list.innerHTML = '';
+            let total = 0;
+            if (cart.length === 0) { 
+                emptyMsg.style.display = 'block'; 
+            } else {
+                emptyMsg.style.display = 'none';
+                cart.forEach((item, index) => {
+                    total += item.price;
+                    list.innerHTML += `
+                    <div class="bg-slate-50 p-3 rounded-xl flex justify-between items-center shadow-sm">
+                        <span class="text-sm font-bold text-slate-700">${item.name}</span>
+                        <div class="flex items-center gap-3">
+                            <span class="text-burgundy font-bold">$${item.price.toFixed(2)}</span>
+                            <button onclick="removeFromCart(${index})" class="text-red-500 text-xs font-bold underline">حذف</button>
+                        </div>
+                    </div>`;
+                });
+            }
+            count.innerText = cart.length;
+            totalEl.innerText = "$" + total.toFixed(2);
+        }
+
+        function removeFromCart(index) { cart.splice(index, 1); updateUI(); }
+    </script>
+
+    <footer class="bg-slate-900 text-white py-10 text-center">
+        <p class="opacity-50">🐾 Loving Homes_Hong Kong  © 2026</p>
+    </footer>
+
+</body>
+</html>
+/* تأثير الرفع للصور والبطاقات */
+.hover-lift { 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.hover-lift:hover { 
+    transform: translateY(-12px); 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ألوان مخصصة لصفحة الخدمات */
+.text-red-900 { color: #7f1d1d; }
+.bg-red-900 { background-color: #7f1d1d; }
+.border-red-900 { border-color: #7f1d1d; }
+
+/* تأثير الزجاج (Glassmorphism) لقسم الخدمات البيطرية */
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+/* إعدادات الخط العام */
+body { 
+    font-family: 'Cairo', sans-serif; 
+    scroll-behavior: smooth;
+}
+
+/* الألوان الخاصة بالبراند */
+.bg-burgundy { background-color: #7f1d1d; }
+.text-burgundy { color: #7f1d1d; }
+.border-burgundy { border-color: #7f1d1d; }
+
+/* تأثيرات بطاقات الألعاب */
+.toy-card { 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.toy-card:hover { 
+    transform: translateY(-12px); 
+    box-shadow: 0 25px 50px -12px rgba(127, 29, 29, 0.15);
+}
+
+/* تنسيق أزرار الإضافة للسلة */
+.btn-add-cart {
+    width: 100%;
+    border: 2px solid #7f1d1d;
+    color: #7f1d1d;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-add-cart:hover {
+    background-color: #7f1d1d;
+    color: white;
+}
+
+/* تنسيق السلة الجانبية (إذا أردت تفعيلها في صفحة الألعاب) */
+#cart-drawer { 
+    transition: transform 0.4s ease-in-out; 
+}
+
+.drawer-open { 
+    transform: translateX(0) !important; 
+}
+/* تنسيقات عامة للهوية البصرية */
+body { 
+    font-family: 'Cairo', sans-serif; 
+}
+
+.bg-burgundy { background-color: #7f1d1d; }
+.text-burgundy { color: #7f1d1d; }
+.border-burgundy { border-color: #7f1d1d; }
+
+/* تأثيرات بطاقات المنتجات */
+.product-card { 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.product-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* السلة الجانبية */
+#cart-drawer { 
+    transition: transform 0.4s ease-in-out; 
+}
+
+.drawer-open { 
+    transform: translateX(0) !important; 
+}
+
+/* تخصيص السكرول بار (شريط التمرير) للسلة */
+#cart-items::-webkit-scrollbar {
+    width: 5px;
+}
+#cart-items::-webkit-scrollbar-thumb {
+    background: #7f1d1d;
+    border-radius: 10px;
+}
