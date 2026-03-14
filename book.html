@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>احجز الآن - Loving Homes</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50">
+
+    <nav class="bg-white shadow-md p-5 flex justify-between items-center px-10 sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+             <img src="file_00000000ba2c7246bf29f1c2293d82a2.jpg" class="h-12 w-12 rounded-full border-2 border-burgundy">
+             <h1 class="text-2xl font-bold text-burgundy">LOVING HOMES</h1>
+        </div>
+        
+        <div class="hidden md:flex space-x-reverse space-x-6 font-bold text-slate-600 flex items-center">
+            <a href="index.html" class="nav-link">الرئيسية</a>
+            <a href="services.html" class="nav-link">خدماتنا</a>
+            <a href="packages.html" class="nav-link">الباقات</a>
+            <a href="shop.html" class="nav-link">المستلزمات</a>
+            <a href="clothes.html" class="nav-link">الملابس</a> 
+            <a href="toys.html" class="nav-link">الألعاب</a> 
+            <a href="book.html" class="text-burgundy border-b-2 border-burgundy pb-1">احجز الآن</a>
+        </div>
+    </nav>
+
+    <div class="py-16 px-6">
+        <div class="max-w-xl mx-auto bg-white p-10 rounded-[2.5rem] shadow-2xl border-t-8 border-burgundy">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">تواصل معنا للحجز</h2>
+                <p class="text-slate-500 italic">سجل بياناتك وسنقوم بالتواصل معك لتأكيد إقامة أليفك</p>
+            </div>
+
+            <form class="space-y-6">
+                <div>
+                    <label class="block mb-2 font-bold text-slate-700">اسم صاحب الكلب</label>
+                    <input type="text" required class="w-full border border-slate-200 p-4 rounded-2xl bg-slate-50 outline-none transition" placeholder="مثال: أحمد محمد">
+                </div>
+
+                <div>
+                    <label class="block mb-2 font-bold text-slate-700">نوع الباقة المطلوبة</label>
+                    <select class="w-full border border-slate-200 p-4 rounded-2xl bg-slate-50 cursor-pointer outline-none transition">
+                        <option>المميزة (Elite) - 40 $</option>
+                        <option>الكلاسيكية (Classic) - 25 $</option>
+                        <option>باقة اليوم (Daily) - 15 $</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block mb-2 font-bold text-slate-700">تاريخ الإقامة</label>
+                    <input type="date" required class="w-full border border-slate-200 p-4 rounded-2xl bg-slate-50 outline-none transition">
+                </div>
+
+                <div>
+                    <label class="block mb-2 font-bold text-slate-700">ملاحظات خاصة (اختياري)</label>
+                    <textarea class="w-full border border-slate-200 p-4 rounded-2xl bg-slate-50 outline-none transition" rows="3" placeholder="هل يحتاج أليفك لعناية خاصة؟"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-burgundy text-white py-4 rounded-2xl font-bold text-lg hover:bg-red-900 shadow-lg transition-all transform hover:scale-[1.02] mt-4">
+                    تأكيد طلب الحجز الملكي
+                </button>
+            </form>
+        </div>
+
+        <div class="max-w-xl mx-auto mt-12 grid grid-cols-2 gap-4">
+            <a href="clothes.html" class="bg-white p-6 rounded-[2rem] shadow-lg flex flex-col items-center text-center hover:shadow-xl transition border border-slate-100">
+                <span class="text-3xl mb-2">👕</span>
+                <span class="font-bold text-burgundy">ملابس جديدة؟</span>
+                <span class="text-xs text-slate-400 mt-1">جهز أليفك للأناقة</span>
+            </a>
+            <a href="toys.html" class="bg-white p-6 rounded-[2rem] shadow-lg flex flex-col items-center text-center hover:shadow-xl transition border border-slate-100">
+                <span class="text-3xl mb-2">🎾</span>
+                <span class="font-bold text-burgundy">لعبة للتسلية؟</span>
+                <span class="text-xs text-slate-400 mt-1">مرح إضافي أثناء المبيت</span>
+            </a>
+        </div>
+    </div>
+
+    <footer class="text-center py-10 text-slate-400 text-sm">
+        <p>🐾  Loving Homes_Hong Kong © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
